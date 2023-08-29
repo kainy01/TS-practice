@@ -1,3 +1,1 @@
-let numbers: number[] = [];
-numbers[0] = 1;
-numbers.forEach((n) => n);
+let user: [number, string] = [1, "zai"];
