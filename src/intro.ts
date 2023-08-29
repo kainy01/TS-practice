@@ -1,2 +1,4 @@
-let age: number = 20;
-if (age < 50) age += 10;
+let sales = 123_123_232;
+let course = "TypeScript";
+let is_published = true;
+let level; //type any bcs we didint init
