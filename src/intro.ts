@@ -81,5 +81,11 @@ type UIWidget = Draggable & Resizble;
 let textBox: UIWidget = {
   drag: () => { },
   resize: () => { }
-
 }
+
+//Literal Types (exact, spexific)
+type Quantity = 50 | 100;
+let quantity : Quantity = 100;
+
+//example use
+type Metric = 'cm' | 'inch';
