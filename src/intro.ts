@@ -53,3 +53,16 @@ let EmployesShorter: Employee = {
     console.log(date)
   }
 }
+
+
+//Union Type
+function KgToLbs(w: number | string): number {
+  //Narrowing
+  if (typeof w === 'number')
+    return w * 2.2
+  else
+    return parseInt(w) * 2.2
+}
+
+KgToLbs(10)
+KgToLbs("10Kg")
