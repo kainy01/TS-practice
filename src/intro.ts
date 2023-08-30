@@ -85,18 +85,35 @@ let textBox: UIWidget = {
 
 //Literal Types (exact, spexific)
 type Quantity = 50 | 100;
-let quantity : Quantity = 100;
+let quantity: Quantity = 100;
 
 //example use
 type Metric = 'cm' | 'inch';
 
 
 //Nullable Types
-function greet (name:string | null | undefined){
+function greet(name: string | null | undefined) {
   if (name)
-  console.log(name.toUpperCase())
-else
-console.log("Hola")
+    console.log(name.toUpperCase())
+  else
+    console.log("Hola")
 }
 greet(null)
 greet(undefined)
+
+
+//Optional chaining
+type Customer = {
+  birthday?: Date
+}
+
+function getCustomer(id: number): Customer | null | undefined {
+  return id === 0 ? null : {
+    birthday: new Date()
+  }
+}
+//long code checking
+let customer = getCustomer(1);
+// if (customer !== null && customer !== undefined)
+//Use Optional Peroperty Access oprator
+console.log(customer?.birthday?.getFullYear)
