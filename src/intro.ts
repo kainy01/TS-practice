@@ -89,3 +89,14 @@ let quantity : Quantity = 100;
 
 //example use
 type Metric = 'cm' | 'inch';
+
+
+//Nullable Types
+function greet (name:string | null | undefined){
+  if (name)
+  console.log(name.toUpperCase())
+else
+console.log("Hola")
+}
+greet(null)
+greet(undefined)
