@@ -66,3 +66,20 @@ function KgToLbs(w: number | string): number {
 
 KgToLbs(10)
 KgToLbs("10Kg")
+
+
+//Intersection Type when object can be 2 types such as drag n drop thingy
+type Draggable = {
+  drag: () => void
+}
+type Resizble = {
+  resize: () => void
+}
+
+type UIWidget = Draggable & Resizble;
+
+let textBox: UIWidget = {
+  drag: () => { },
+  resize: () => { }
+
+}
