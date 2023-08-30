@@ -117,3 +117,11 @@ let customer = getCustomer(1);
 // if (customer !== null && customer !== undefined)
 //Use Optional Peroperty Access oprator
 console.log(customer?.birthday?.getFullYear)
+
+//Optiomal element access oprator usfull with array ex: customers?.[0]
+
+
+//Optional call 
+let log: any = null
+log?.('a')
+
